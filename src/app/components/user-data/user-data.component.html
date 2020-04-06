@@ -1,0 +1,29 @@
+<div>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <br>
+      <input matInput type="text" formControlName="name" placeholder="Mustermann">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Vorname</mat-label>
+      <br>
+      <input matInput type="text" formControlName="prename" placeholder="Max">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>E-Mail</mat-label>
+      <br>
+      <input matInput type="text" formControlName="mail" placeholder="max.musterman@web.de">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Alter</mat-label>
+      <br>
+      <input matInput type="text" formControlName="age" placeholder="18">
+    </mat-form-field>
+    <br>
+    <button mat-button (click)="submitUserProfile()">Kostenpflichtig bestellen</button>
+  </form>
+</div>
