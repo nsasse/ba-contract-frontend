@@ -28,9 +28,15 @@ export class UserDataComponent implements OnInit {
   public submitUserProfile() {
     this.restService.sendUserProfile(
       new UserProfile(
+        null,
         this.form.value.name,
         this.form.value.prename,
         this.form.value.mail,
-        this.form.value.age));
+        this.form.value.age,
+        null)).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 }
