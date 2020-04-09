@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {RestService} from '../../services/rest.service';
 import {UserProfile} from '../../models/user-profile.model';
 
+
 @Component({
   selector: 'app-user-data',
   templateUrl: './user-data.component.html',

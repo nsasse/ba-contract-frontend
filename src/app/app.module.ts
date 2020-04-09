@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {appRouting, routingComponents} from './app.routing';
 
 import {AppComponent} from './app.component';
 import {UserDataComponent} from './components/user-data/user-data.component';
@@ -11,11 +12,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BuyButtonComponent} from './components/buy-button/buy-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserDataComponent
+    UserDataComponent,
+    BuyButtonComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -26,10 +30,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    appRouting
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UserDataComponent, BuyButtonComponent]
 })
 export class AppModule {
 }
