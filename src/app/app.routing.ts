@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 export const appRoutes: Routes = [
   {path: '', component: AppComponent},
   {path: 'contract', component: UserDataComponent},
-  {path: 'buy', component: BuyButtonComponent}
+  {path: 'buy', component: BuyButtonComponent},
 ];
 
 export const appRouting = RouterModule.forRoot(appRoutes);

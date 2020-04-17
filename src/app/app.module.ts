@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {Injector, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {appRouting, routingComponents} from './app.routing';
-import {createCustomElement} from '@angular/elements';
 
 import {AppComponent} from './app.component';
 import {UserDataComponent} from './components/user-data/user-data.component';
@@ -42,8 +41,5 @@ import {BuyButtonComponent} from './components/buy-button/buy-button.component';
   ]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const el = createCustomElement(UserDataComponent, {injector: this.injector});
-    customElements.define('user-data', el);
-  }
+
 }

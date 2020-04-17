@@ -6,8 +6,7 @@ const concat = require('concat');
     './dist/ba-contract/polyfills-es5.js',
     './dist/ba-contract/main-es5.js',
   ]
-  await fs.ensureDir('elements')
-  await concat(files, 'elements/user-data.js');
-  await fs.copyFile('./dist/ba-contract/styles.css', 'elements/styles.css')
-  await fs.copy('./src/assets/', 'elements/assets/')
+  await fs.ensureDir('./src/assets/')
+  await concat(files, './src/assets/user-data.js');
+  await fs.copyFile('./dist/ba-contract/styles.css', './src/assets/styles.css')
 })()
